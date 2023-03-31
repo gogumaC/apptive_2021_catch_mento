@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mentoringRecordSettingToolbar"
+            style="@style/CatchMentorToolbar"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="나의 멘토링 일지 설정" />
+
+        <View
+            android:id="@+id/view12"
+            style="@style/DividingLine"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mentoringRecordSettingToolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="37dp"
+                android:paddingStart="39dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="일지의 제목은 어떻게 할까요?"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="멘티의 일지도 해당 제목으로 설정 됩니다"
+                        android:textColor="#505050"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/mentoringRecordSettingTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23dp"
+                        android:ems="10"
+                        android:hint="일지의 제목을 작성해주세요!"
+                        android:inputType="textPersonName"
+                        android:textColor="#505050"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="45dp">
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="멘토링 정보를 입력해주세요!"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/mentoringRecordSettingSelectSubject"
+                        android:layout_width="172dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="35dp"
+                        android:background="@null"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:drawablePadding="10dp"
+                        android:gravity="right|center_vertical"
+                        android:text="카테고리를 선택해주세요"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:text="멘토링 일정"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mentoringRecordSettingSelectSubject" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="멘토링 시작일"
+                        android:textColor="#c9c9c9"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/textView39"
+                        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+                    <Button
+                        android:id="@+id/mentoringRecordSettingSetMentoringStartDate"
+                        android:layout_width="77dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="58dp"
+                        android:background="@drawable/sytle_grey_rounded_border"
+                        android:drawableEnd="@drawable/ic_empty_calendar"
+                        android:gravity="center"
+                        android:paddingRight="8dp"
+                        android:text="00.00"
+                        android:textColor="#505050"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView40"
+                        app:layout_constraintStart_toEndOf="@+id/textView40"
+                        app:layout_constraintTop_toTopOf="@+id/textView40" />
+
+                    <TextView
+                        android:id="@+id/textView41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="반복되는 요일을 선택하면 달력에 자동으로 등록해드려요!"
+                        android:textColor=" #505050"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="7dp"
+                        android:background=" #c9c9c9"
+                        app:layout_constraintEnd_toEndOf="@+id/mentoringRecordSettingSetMentoringStartDate"
+                        app:layout_constraintStart_toStartOf="@+id/textView40"
+                        app:layout_constraintTop_toBottomOf="@+id/mentoringRecordSettingSetMentoringStartDate" />
+
+                    <View
+                        android:id="@+id/view14"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background=" #c9c9c9"
+                        app:layout_constraintEnd_toEndOf="@+id/mentoringRecordSettingSelectSubject"
+                        app:layout_constraintStart_toStartOf="@+id/textView40"
+                        app:layout_constraintTop_toBottomOf="@+id/mentoringRecordSettingSelectSubject" />
+
+                    <LinearLayout
+                        android:id="@+id/mentoringRecordSettingWeekSelect"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="#FFC107"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView41">
+
+                        <CheckBox
+                            android:id="@+id/mentoringRecordSettingWeekSelectSunday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/checkbox_day_of_week"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="일" />
+
+                        <CheckBox
+                            android:id="@+id/mentoringRecordSettingWeekSelectMonday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/checkbox_day_of_week"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="월" />
+
+                        <CheckBox
+                            android:id="@+id/mentoringRecordSettingWeekSelectTuseday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/checkbox_day_of_week"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="화" />
+
+                        <CheckBox
+                            android:id="@+id/mentoringRecordSettingWeekSelectWednesDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/checkbox_day_of_week"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="수" />
+
+                        <CheckBox
+                            android:id="@+id/mentoringRecordSettingWeekSelectThursday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/checkbox_day_of_week"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="목" />
+
+                        <CheckBox
+                            android:id="@+id/mentoringRecordSettingWeekSelectFriday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/checkbox_day_of_week"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="금" />
+
+                        <CheckBox
+                            android:id="@+id/mentoringRecordSettingWeekSelectSaturday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/checkbox_day_of_week"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="토" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mentoringRecordSettingTimeSetting"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mentoringRecordSettingWeekSelect2" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mentoringRecordSettingWeekSelect2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mentoringRecordSettingWeekSelect" />
+
+                    <Button
+                        android:id="@+id/mentoringRecordSettingSave"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:background="@drawable/sytle_login_btn"
+                        android:backgroundTint="#2f54c4"
+                        android:text="저장하기"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mentoringRecordSettingTimeSetting"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

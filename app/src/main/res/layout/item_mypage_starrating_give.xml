@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="39dp"
+    android:paddingVertical="13dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_mypage_starrating_give_mentoring_name"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="15sp"
+        android:layout_marginTop="7dp"
+        android:textColor="#505050"
+        android:text="멘토링 이름"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:id="@+id/item_mypage_starrating_give_mentoring_subject"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toEndOf="@id/item_mypage_starrating_give_mentoring_name"
+        app:layout_constraintTop_toTopOf="@id/item_mypage_starrating_give_mentoring_name"
+        app:layout_constraintBottom_toBottomOf="@id/item_mypage_starrating_give_mentoring_name"
+        android:textColor="#8d8d8d"
+        android:text="해당 과목"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textSize="10sp"
+        android:id="@+id/item_mypage_starrating_give_mentoring_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/item_mypage_starrating_give_mentoring_subject"
+        android:textColor="#505050"
+        android:text="2022.1"/>
+    <RatingBar
+        android:layout_marginTop="9dp"
+        android:id="@+id/item_mypage_starrating_give_ratingbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_mypage_starrating_give_mentoring_name"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="0"
+        android:max="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/StoreBigRatingBar"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/item_mypage_starrating_give_view"
+        android:background="#f2f2f2"
+        app:layout_constraintTop_toBottomOf="@id/item_mypage_starrating_give_ratingbar"
+        android:layout_marginTop="10dp">
+    </View>
+
+    <TextView
+        android:id="@+id/item_mypage_starrating_mentor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="6sp"
+        android:text="멘토명 닉네임"
+        android:textColor="#505050"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_mypage_starrating_give_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

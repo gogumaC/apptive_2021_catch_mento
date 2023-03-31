@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="33dp"
+        android:orientation="vertical">
+
+        <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#505050"
+            android:lineSpacingExtra="4sp"
+            android:text="당신은 누굴 찾으러 왔나요?"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="36dp"
+            android:background="@color/white"
+            android:text="멘토"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:id="@+id/signup_sub_mentor_btn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="36dp"
+            android:background="@color/white"
+            android:text="멘티"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:id="@+id/signup_sub_mentee_btn"/>
+        <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#2f54c4"
+            android:lineSpacingExtra="7sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="15dp"
+            android:text="를 캐치하러 왔어요!"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,2 @@
+rootProject.name = "catch_mentor"
+include ':app'

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.catch_mentor.customView.LongDateView
+        android:id="@+id/longDateView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/longDateView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.catch_mentor.customView.LongDateView
+        android:id="@+id/longDateView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/longDateView1"
+        app:layout_constraintEnd_toStartOf="@+id/longDateView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/longDateView1"
+        app:layout_constraintTop_toTopOf="@+id/longDateView1" />
+
+    <com.example.catch_mentor.customView.LongDateView
+        android:id="@+id/longDateView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/longDateView2"
+        app:layout_constraintEnd_toStartOf="@+id/longDateView4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/longDateView2"
+        app:layout_constraintTop_toTopOf="@+id/longDateView2" />
+
+    <com.example.catch_mentor.customView.LongDateView
+        android:id="@+id/longDateView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/longDateView3"
+        app:layout_constraintEnd_toStartOf="@+id/longDateView5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/longDateView3"
+        app:layout_constraintTop_toTopOf="@+id/longDateView3" />
+
+    <com.example.catch_mentor.customView.LongDateView
+        android:id="@+id/longDateView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/longDateView4"
+        app:layout_constraintEnd_toStartOf="@+id/longDateView6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/longDateView4"
+        app:layout_constraintTop_toTopOf="@+id/longDateView4" />
+
+    <com.example.catch_mentor.customView.LongDateView
+        android:id="@+id/longDateView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/longDateView5"
+        app:layout_constraintEnd_toStartOf="@+id/longDateView7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/longDateView5"
+        app:layout_constraintTop_toTopOf="@+id/longDateView5" />
+
+    <com.example.catch_mentor.customView.LongDateView
+        android:id="@+id/longDateView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/longDateView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/longDateView6"
+        app:layout_constraintTop_toTopOf="@+id/longDateView6" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

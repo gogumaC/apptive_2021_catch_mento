@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/itemSetMentoringScheduleStartTime"
+        android:layout_width="77dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/sytle_grey_rounded_border"
+        android:text="00:00"
+        android:textColor="#505050"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/itemSetMentoringScheduleFinishTime"
+        android:layout_width="77dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/sytle_grey_rounded_border"
+        android:text="00:00"
+        android:textColor="#505050"
+        app:layout_constraintBottom_toBottomOf="@+id/textView31"
+        app:layout_constraintStart_toEndOf="@+id/textView31"
+        app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="~"
+        android:textColor=" #c9c9c9"
+        app:layout_constraintBottom_toBottomOf="@+id/itemSetMentoringScheduleStartTime"
+        app:layout_constraintStart_toEndOf="@+id/itemSetMentoringScheduleStartTime"
+        app:layout_constraintTop_toTopOf="@+id/itemSetMentoringScheduleStartTime" />
+
+    <Button
+        android:id="@+id/itemSetMentoringScheduleDayOfWeek"
+        android:layout_width="50dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sytle_grey_rounded_border"
+        android:drawableRight="@drawable/ic_small_x"
+        android:paddingRight="8dp"
+        android:text="월"
+        android:textColor="#2f54c4"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemSetMentoringScheduleFinishTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemSetMentoringScheduleFinishTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

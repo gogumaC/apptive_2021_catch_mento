@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        layout="@layout/toolbar"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+        <ToggleButton
+            android:id="@+id/mypage_mypost_upload_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="등록된 게시글"
+            android:textOn="등록된 게시글"
+            android:layout_weight="1"
+            android:background="@drawable/design_mypost_toggle"
+            />
+        <ToggleButton
+            android:id="@+id/mypage_mypost_temp_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="보관한 게시글"
+            android:textOn="보관한 게시글"
+            android:textColor="@color/text_light_dark"
+            android:layout_weight="1"
+            android:background="@drawable/design_mypost_toggle"
+             />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mypage_mypost_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+</layout>

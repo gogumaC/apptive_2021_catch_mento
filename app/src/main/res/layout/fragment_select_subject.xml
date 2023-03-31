@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_subject_title"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="과목"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/select_subject_title"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="멘토링을 진행하길 원하는 과목을 선택해주세요"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/select_subject_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/select_subject_title"
+        android:layout_marginTop="40dp"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="199dp">
+
+        <LinearLayout
+            android:id="@+id/select_subject_linearLayout"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ToggleButton
+                android:id="@+id/selectSubject1"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/design_search_toggle_button"
+
+                android:backgroundTint="@color/white"
+                android:drawableEnd="@drawable/icon_subject_btn"
+                android:paddingEnd="30dp"
+                android:text="자기주도학습코칭•학습동기부여"
+                android:textColor="#2f54c4"
+
+                android:textOff="자기주도학습코칭•학습동기부여"
+
+                android:textOn="자기주도학습코칭•학습동기부여"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/select_subject_1_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+            <ToggleButton
+                android:id="@+id/select_subject_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/design_search_toggle_button"
+                android:backgroundTint="@color/white"
+                android:drawableEnd="@drawable/icon_subject_btn"
+                android:paddingEnd="30dp"
+                android:text="학습•교습"
+                android:textColor="#2f54c4"
+                android:textOff="학습•교습"
+                android:textOn="학습•교습"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/select_subject_2_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/select_subject_2"
+
+                />
+
+            <ToggleButton
+                android:id="@+id/select_subject_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/design_search_toggle_button"
+                android:backgroundTint="@color/white"
+                android:drawableEnd="@drawable/icon_subject_btn"
+                android:paddingEnd="30dp"
+                android:text="대학입시컨설팅"
+                android:textColor="#2f54c4"
+                android:textOff="대학입시컨설팅"
+                android:textOn="대학입시컨설팅"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/select_subject_3_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/select_subject_3" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

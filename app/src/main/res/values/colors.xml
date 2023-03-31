@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+
+    <color name="date_selected">#FFC107</color>
+    <color name="date_unselected">#FFFFFFFF</color>
+    <color name="text_dark">#505050</color>
+    <color name="text_light_dark">#8d8d8d</color>
+
+<!--    progress 관련-->
+    <color name="progress_not_yet">#ebebeb</color>
+    <color name="progress_proceeding">#ffd16a</color>
+    <color name="progress_done">#2f54c4</color>
+    <color name="task">#04a09a</color>
+
+<!--    채팅 버튼 관련-->
+    <color name="match_ing">#2f54c4</color>
+    <color name="match_com">#f48d00</color>
+    <color name="match_fail">#ff4848</color>
+    <color name="match_default">#505050</color>
+
+
+    <color name="main_color">#2f54c4</color>
+
+</resources>

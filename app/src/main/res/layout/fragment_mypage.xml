@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f8f8f8"
+    >
+    <include
+        layout="@layout/toolbar"
+        />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:paddingHorizontal="36dp"
+    android:paddingVertical="18dp"
+    android:background="@color/white">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/mypage_image"
+        android:background="@drawable/profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/mypage_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="normal"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:text="반갑습니다"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/mypage_name"
+        app:layout_constraintBottom_toBottomOf="@id/mypage_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        android:textColor="#2f54c4"
+        android:lineSpacingExtra="4sp" />
+    <TextView
+        android:id="@+id/mypage_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4sp"
+        android:text="멘티님!"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/mypage_image"
+        app:layout_constraintStart_toEndOf="@+id/mypage_name" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+
+        android:text="프로필 수정하기"
+        android:background="@drawable/style_mypage_button"
+        android:id="@+id/mypage_button_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypage_image"
+        android:layout_marginTop="37dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="36dp"
+        android:background="@color/white"
+        android:elevation="6dp"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_mypage_button"
+            android:layout_marginTop="31dp"
+            android:id="@+id/mypage_button_favpost"
+            android:padding="20dp"
+            android:text="찜한 게시물"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_mypage_button"
+            android:layout_marginTop="21dp"
+            android:padding="20dp"
+            android:visibility="gone"
+            android:id="@+id/mypage_button_test"
+            android:text="나는 이런 사람이에요!\n다시하기 / 공유하기"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_mypage_button"
+            android:layout_marginTop="21dp"
+            android:id="@+id/mypage_button_mypost"
+            android:padding="20dp"
+
+            android:text="나의 게시물"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_mypage_button"
+            android:layout_marginTop="21dp"
+            android:id="@+id/mypage_button_mentor_star"
+            android:padding="20dp"
+
+            android:text="멘토 별점 남기기"/>
+
+    </LinearLayout>
+</LinearLayout>
+</layout>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.catch_mentor.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_writeFragment"
+            app:destination="@id/writeMentorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calendarRecordFragment"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_homeFragment_to_chattingListFragment"
+            app:destination="@id/chattingListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_mypageFragment"
+            app:destination="@id/mypageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment2"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/writeMentorFragment"
+        android:name="com.example.catch_mentor.write.MentorWriteFragment"
+        android:label="WriteMentorFragment"
+        tools:layout="@layout/fragment_write_mentor">
+        <action
+            android:id="@+id/action_writeMentorFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_writeMentorFragment_to_searchSubjectFragment"
+            app:destination="@id/searchSubjectFragment" />
+        <action
+            android:id="@+id/action_writeMentorFragment_to_searchAddress"
+            app:destination="@id/searchAddress" />
+    </fragment>
+    <fragment
+        android:id="@+id/writeMenteeFragment"
+        android:name="com.example.catch_mentor.write.MenteeWriteFragment"
+        android:label="WriteMenteeFragment"
+        tools:layout="@layout/fragment_write_mentee">
+        <action
+            android:id="@+id/action_writeMenteeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_writeMenteeFragment_to_searchSubjectFragment"
+            app:destination="@id/searchSubjectFragment" />
+        <action
+            android:id="@+id/action_writeMenteeFragment_to_searchAddress"
+            app:destination="@id/searchAddress" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.catch_mentor.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_searchFragment_to_writeMenteeFragment"
+            app:destination="@id/writeMenteeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_writeMentorFragment"
+            app:destination="@id/writeMentorFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_postMenteeFragment"
+            app:destination="@id/postMenteeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_postMentorFragment"
+            app:destination="@id/postMentorFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_searchSubjectFragment"
+            app:destination="@id/searchSubjectFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_searchAddress"
+            app:destination="@id/searchAddress" />
+        <action
+            android:id="@+id/action_searchFragment_to_mypageFragment"
+            app:destination="@id/mypageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postMentorFragment"
+        android:name="com.example.catch_mentor.post.MentorPostFragment"
+        android:label="PostMentorFragment"
+        tools:layout="@layout/fragment_post_mentor">
+        <action
+            android:id="@+id/action_postMentorFragment_to_chattingFragment"
+            app:destination="@id/chattingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postMenteeFragment"
+        android:name="com.example.catch_mentor.post.MenteePostFragment"
+        android:label="PostMenteeFragment"
+        tools:layout="@layout/fragment_post_mentee">
+        <action
+            android:id="@+id/action_postMenteeFragment_to_chattingFragment"
+            app:destination="@id/chattingFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mypageMypostEditMentorFragment"
+        android:name="com.example.catch_mentor.mypage.MypageMypostEditMentorFragment"
+        android:label="PostMentorFragment"
+        tools:layout="@layout/fragment_write_mentor">
+    </fragment>
+    <fragment
+        android:id="@+id/mypageMypostEditMenteeFragment"
+        android:name="com.example.catch_mentor.mypage.MypageMypostEditMenteeFragment"
+        android:label="PostMenteeFragment"
+        tools:layout="@layout/fragment_write_mentee">
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/searchSubjectFragment"
+        android:name="com.example.catch_mentor.search.SelectSubjectFragment"
+        android:label="SelectSubjectFragment"
+        tools:layout="@layout/fragment_select_subject"
+        >
+
+        <action
+            android:id="@+id/action_searchSubjectFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_searchSubjectFragment_to_writeMentorFragment"
+            app:destination="@id/writeMentorFragment" />
+        <action
+            android:id="@+id/action_searchSubjectFragment_to_writeMenteeFragment"
+            app:destination="@id/writeMenteeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingFragment"
+        android:name="com.example.catch_mentor.chatting.ChattingFragment"
+        tools:layout="@layout/fragment_chatting"
+        android:label="ChattingFragment">
+        <action
+            android:id="@+id/action_chattingFragment_to_postMenteeFragment"
+            app:destination="@id/postMenteeFragment" />
+        <action
+            android:id="@+id/action_chattingFragment_to_postMentorFragment"
+            app:destination="@id/postMentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingListFragment"
+        android:name="com.example.catch_mentor.chatting.ChattingListFragment"
+        tools:layout="@layout/fragment_chatting_list"
+        android:label="ChattingListFragment">
+        <action
+            android:id="@+id/action_chattingListFragment_to_chattingFragment"
+            app:destination="@id/chattingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchAddress"
+        android:name="com.example.catch_mentor.search.SearchAddress"
+        tools:layout="@layout/fragment_address"
+        android:label="AddressFragment">
+        <action
+            android:id="@+id/action_searchAddress_to_writeMentorFragment"
+            app:destination="@id/writeMentorFragment" />
+        <action
+            android:id="@+id/action_searchAddress_to_writeMenteeFragment"
+            app:destination="@id/writeMenteeFragment" />
+        <action
+            android:id="@+id/action_searchAddress_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_searchAddress_to_signupSubCFragment"
+            app:destination="@id/signupSubCFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mypageMypostFragment"
+        android:name="com.example.catch_mentor.mypage.MypageMypostFragment"
+        tools:layout="@layout/fragment_mypage_mypost"
+        android:label="MypageMypostFragment">
+        <action
+            android:id="@+id/action_mypageMypostFragment_to_postMenteeFragment"
+            app:destination="@id/postMenteeFragment" />
+        <action
+            android:id="@+id/action_mypageMypostFragment_to_postMentorFragment"
+            app:destination="@id/postMentorFragment" />
+        <action
+            android:id="@+id/action_mypageMypostFragment_to_writeMenteeFragment"
+            app:destination="@id/writeMenteeFragment" />
+        <action
+            android:id="@+id/action_mypageMypostFragment_to_writeMentorFragment"
+            app:destination="@id/writeMentorFragment" />
+        <action
+            android:id="@+id/action_mypageMypostFragment_to_mypageMypostEditMenteeFragment"
+            app:destination="@id/mypageMypostEditMenteeFragment" />
+        <action
+            android:id="@+id/action_mypageMypostFragment_to_mypageMypostEditMentorFragment"
+            app:destination="@id/mypageMypostEditMentorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mypageFragment"
+        android:name="com.example.catch_mentor.mypage.MypageFragment"
+        tools:layout="@layout/fragment_mypage"
+        android:label="MypageFragment">
+        <action
+            android:id="@+id/action_mypageFragment_to_mypageMypostFragment"
+            app:destination="@id/mypageMypostFragment" />
+        <action
+            android:id="@+id/action_mypageFragment_to_mypageProfileFragment"
+            app:destination="@id/mypageProfileFragment" />
+        <action
+            android:id="@+id/action_mypageFragment_to_mypageFavpostFragment"
+            app:destination="@id/mypageFavpostFragment" />
+        <action
+            android:id="@+id/action_mypageFragment_self"
+            app:destination="@id/mypageFragment" />
+        <action
+            android:id="@+id/action_mypageFragment_to_mypageStarratingFragment"
+            app:destination="@id/mypageStarratingFragment" />
+        <action
+            android:id="@+id/action_mypageFragment_self2"
+            app:destination="@id/mypageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mypageProfileFragment"
+        android:name="com.example.catch_mentor.mypage.MypageProfileFragment"
+        tools:layout="@layout/fragment_mypage_profile"
+        android:label="MypageProfileFragment">
+        <action
+            android:id="@+id/action_mypageProfileFragment_to_searchAddress"
+            app:destination="@id/searchAddress" />
+    </fragment>
+    <fragment
+        android:id="@+id/mypageFavpostFragment"
+        android:name="com.example.catch_mentor.mypage.MypageFavpostFragment"
+        tools:layout="@layout/fragment_mypage_favpost"
+        android:label="MypageFavpostFragment">
+        <action
+            android:id="@+id/action_mypageFavpostFragment_to_postMentorFragment"
+            app:destination="@id/postMentorFragment" />
+        <action
+            android:id="@+id/action_mypageFavpostFragment_to_postMenteeFragment"
+            app:destination="@id/postMenteeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mypageStarratingFragment"
+        android:name="com.example.catch_mentor.mypage.MypageStarratingFragment"
+        tools:layout="@layout/fragment_mypage_starrating"
+        android:label="MypageStarratingFragment">
+        <action
+            android:id="@+id/action_mypageStarratingFragment_to_mypageFragment"
+            app:destination="@id/mypageFragment" />
+        <action
+            android:id="@+id/action_mypageStarratingFragment_to_mypageStarratingGiveFragment"
+            app:destination="@id/mypageStarratingGiveFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mypageStarratingGiveFragment"
+        android:name="com.example.catch_mentor.mypage.MypageStarratingGiveFragment"
+        tools:layout="@layout/fragment_mypage_starrating_give"
+        android:label="MypageStarratingGiveFragment">
+        <argument
+            android:name="mentoring"
+            app:argType="com.example.catch_mentor.dataClass.Mentoring" />
+    </fragment>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/mentoringListFragment">
+        <fragment
+            android:id="@+id/calendarRecordFragment"
+            android:name="com.example.catch_mentor.mentoringRecord.CalendarRecordFragment"
+            android:label="CalendarRecordFragment" >
+            <argument
+                android:name="mentoring"
+                app:argType="com.example.catch_mentor.dataClass.Mentoring" />
+            <action
+                android:id="@+id/action_calendarRecordFragment_to_mentoringRecordSettingFragment"
+                app:destination="@id/mentoringRecordSettingFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/mentoringListFragment"
+            android:name="com.example.catch_mentor.mentoringRecord.mentoringList.MentoringListFragment"
+            android:label="MentoringListFragment" >
+            <action
+                android:id="@+id/action_mentoringListFragment_to_calendarRecordFragment"
+                app:destination="@id/calendarRecordFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/mentoringRecordSettingFragment"
+            android:name="com.example.catch_mentor.mentoringRecord.mentoringRecordSetting.MentoringRecordSettingFragment"
+            android:label="MentoringRecordSettingFragment" >
+            <argument android:name="mentoringId" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.example.catch_mentor.launch.LaunchFragment"
+        android:label="LaunchFragment" >
+        <action
+            android:id="@+id/action_launchFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_launchFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.catch_mentor.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment" /><action android:id="@+id/action_global_mypageStarratingFragment" app:destination="@id/mypageStarratingFragment"/>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.catch_mentor.signup.SignupFragmentMain"
+        tools:layout="@layout/fragment_signup"
+        android:label="SignupFragment" >
+        <action
+            android:id="@+id/action_signupFragment_to_launchFragment"
+            app:destination="@id/launchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupSubFragment"
+        android:name="com.example.catch_mentor.signup.SignupFragmentSub"
+        tools:layout="@layout/fragment_signup_sub"
+        android:label="SignupFragment" />
+    <fragment
+        android:id="@+id/signupSubAFragment"
+        android:name="com.example.catch_mentor.signup.SignupFragmentSubA"
+        tools:layout="@layout/fragment_signup_sub_a"
+        android:label="SignupFragment" />
+    <fragment
+        android:id="@+id/signupSubBFragment"
+        android:name="com.example.catch_mentor.signup.SignupFragmentSubB"
+        tools:layout="@layout/fragment_signup_sub_b"
+        android:label="SignupFragment" />
+    <fragment
+        android:id="@+id/signupSubCFragment"
+        android:name="com.example.catch_mentor.signup.SignupFragmentSubC"
+        tools:layout="@layout/fragment_signup_sub_c"
+        android:label="SignupFragment" >
+        <action
+            android:id="@+id/action_signupSubCFragment_to_searchAddress"
+            app:destination="@id/searchAddress" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DividingLine">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#eaeaea</item>
+    </style>
+    <style name="CatchMentorToolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="background">@color/white</item>
+        <item name="navigationIcon">@drawable/icon_back</item>
+
+
+        <item name="titleTextAppearance">@style/Toolbar.TitleText</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FloattingBtn" parent="Theme.MaterialComponents.Light.NoActionBar">
+    </style>
+
+    <style name="SpinnerDivideStyle" parent="android:style/Widget.ListView.DropDown">
+        <item name="android:divider">#c9c9c9</item> <!-- divider 색 -->
+        <item name="android:dividerHeight">0.5dp</item> <!-- divider 높이 -->
+    </style>
+
+    <style name="SpinnerTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:dropDownListViewStyle">@style/SpinnerDivideStyle</item>
+    </style>
+
+    <style
+        name="StoreBigRatingBar"
+        parent="@android:style/Widget.RatingBar">
+        <item name="colorControlNormal">#c9c9c9</item>
+        <item name="colorControlActivated">#ffd16a</item>
+    </style>
+
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="282dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/style_dialog"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/dialog_chat_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="매칭 실패"
+            android:textColor="#2f54c4"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/dialog_chat_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=" 로"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text=" 변경하시겠어요?"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/main_color"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:id="@+id/dialog_chat_txt3"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="매칭 완료 후에는\n매칭 상태를 변경할 수 없어요."
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal">
+    <Button
+        android:text="취소"
+        android:id="@+id/dialog_chat_cancel"
+        android:textColor="#8d8d8d"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="33dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/style_keyword_button">
+    </Button>
+    <Button
+        android:text="예"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="21dp"
+        android:id="@+id/dialog_chat_fin"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="33dp"
+        android:background="@drawable/style_dialog_btn">
+    </Button>
+
+</LinearLayout>
+</LinearLayout>

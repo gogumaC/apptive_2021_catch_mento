@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/catchmentor_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/CatchMentorToolbar"
+            android:background="@color/white"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15sp"
+
+                android:textColor="@color/black"
+                android:id="@+id/toolbar_title"
+                android:text=""/>
+            <ToggleButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/toolbar_btn"
+                android:background="@drawable/design_favorite_button"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:textOn=""
+                android:textOff=""
+                android:layout_marginEnd="10dp"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar_btn_report"
+                android:background="@drawable/icon_report"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:textSize="13sp"
+                android:textColor="#8d8d8d"
+                android:clickable="true"
+                android:id="@+id/toolbar_ok_btn"
+                android:layout_marginEnd="10dp"
+                android:text="확인"
+                android:focusable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:clickable="true"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:textColor="#8d8d8d"
+                android:id="@+id/toolbar_temp_btn"
+                android:text="임시저장"
+                android:focusable="true" />
+        </androidx.appcompat.widget.Toolbar>
+</layout>

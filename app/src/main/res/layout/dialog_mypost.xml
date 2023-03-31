@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/style_dialog"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:text="게시글 관리"/>
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/mypost_dialog_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/mypostMenu"
+        android:divider="@color/white"/>
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/mypost_dialog_list2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/temppostMenu"
+        android:visibility="gone"
+        android:divider="@color/white"/>
+
+</LinearLayout>

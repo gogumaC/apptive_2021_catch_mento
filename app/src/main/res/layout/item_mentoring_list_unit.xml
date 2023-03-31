@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="mentoring"
+            type="com.example.catch_mentor.dataClass.Mentoring" />
+        <variable
+            name="mentee"
+            type="com.example.catch_mentor.dataClass.Mentee" />
+        <variable
+            name="mentor"
+            type="com.example.catch_mentor.dataClass.Mentor"/>
+    </data>
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="99dp"
+        android:paddingStart="10dp"
+        app:cardBackgroundColor="#2f54c4"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="#FFFFFF"
+            android:minHeight="99dp"
+            android:paddingStart="19dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="13dp">
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{mentoring.title,default=멘토링명}"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@{mentee.name,default=멘티}"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mentoringListUnitSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                app:layout_constraintEnd_toStartOf="@+id/mentoringLIstUnitMentorImage"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mentoringLIstUnitMentorImage"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:inputType="textImeMultiLine"
+                android:text="@{mentor.name+` 멘토`,default=멘토}"
+                android:textColor="#8d8d8d"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="@+id/mentoringLIstUnitMentorImage"
+                app:layout_constraintStart_toStartOf="@+id/mentoringLIstUnitMentorImage"
+                app:layout_constraintTop_toBottomOf="@+id/mentoringLIstUnitMentorImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

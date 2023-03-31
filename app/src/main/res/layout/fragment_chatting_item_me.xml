@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/m_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:id="@+id/m_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:visibility="invisible"
+            android:textColor="#333333"
+            android:layout_toStartOf="@+id/m_iv"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/m_tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/m_tv_name"
+            android:layout_toStartOf="@id/m_iv"
+            android:layout_marginEnd="16dp"
+            android:padding="12dp"
+            android:maxWidth="250dp"
+            android:textColor="@color/white"
+            android:background="@drawable/style_chatting_me"
+            />
+        <TextView
+            android:id="@+id/m_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_toStartOf="@+id/m_tv_msg"
+            android:layout_marginEnd="8dp"
+            android:layout_alignBottom="@id/m_tv_msg"/>
+        <View
+            android:id="@+id/m_tv_check"
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:background="@drawable/icon_check"
+            android:visibility="invisible"
+            android:layout_toStartOf="@+id/m_tv_time"
+            android:layout_marginEnd="8dp"
+            android:layout_alignBottom="@id/m_tv_msg"/>
+
+
+    </RelativeLayout>
+</layout>

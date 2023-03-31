@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView
+            android:id="@+id/calendarRecordCalendarView"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:compactCalendarCurrentDayBackgroundColor="#8d8d8d"
+            app:compactCalendarCurrentDayTextColor="@color/white"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="#888d8d8d"
+            app:compactCalendarCurrentSelectedDayTextColor="@color/white"
+            app:compactCalendarDisplayOtherMonthDays="false"
+            app:compactCalendarMultiEventIndicatorColor="#fff"
+            app:compactCalendarShouldSelectFirstDayOfMonthOnScroll="false"
+            app:compactCalendarTargetHeight="250dp"
+            app:compactCalendarTextColor="#8d8d8d"
+            app:compactCalendarTextSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <TextView
+            android:id="@+id/calendarRecrodDayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="TextView"
+            android:textColor="#505050"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <ImageButton
+            android:id="@+id/calendarRecordChangePrevMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="29dp"
+            android:background="@null"
+            android:backgroundTint="#505050"
+            app:layout_constraintBottom_toBottomOf="@+id/calendarRecrodDayOfWeek"
+            app:layout_constraintEnd_toStartOf="@+id/calendarRecrodDayOfWeek"
+            app:layout_constraintTop_toTopOf="@+id/calendarRecrodDayOfWeek"
+            app:srcCompat="@drawable/icon_back" />
+
+        <ImageButton
+            android:id="@+id/calendarRecordChangeNextMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="27dp"
+            android:background="@null"
+            android:backgroundTint="#505050"
+            app:layout_constraintBottom_toBottomOf="@+id/calendarRecrodDayOfWeek"
+            app:layout_constraintStart_toEndOf="@+id/calendarRecrodDayOfWeek"
+            app:layout_constraintTop_toTopOf="@+id/calendarRecrodDayOfWeek"
+            app:srcCompat="@drawable/ic_right_arrow" />
+
+        <com.example.catch_mentor.customView.ProgressRecordGraph
+            android:id="@+id/progressRecordGraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="37dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarRecrodDayOfWeek" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="28dp"
+            android:background="#f8f8f8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressRecordGraph" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="21dp"
+            android:text="월간 현황"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarRecordToolbar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/calendarRecordToolbar"
+            style="@style/CatchMentorToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="나의 멘토링 일지" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="25dp"
+            android:drawableStart="@drawable/style_small_dot"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/task"
+            android:text="과제"
+            android:textColor=" #505050"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <ImageButton
+            android:id="@+id/calendarRecordSettingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginEnd="24dp"
+            android:background="@null"
+            android:backgroundTint="#8d8d8d"
+            app:layout_constraintBottom_toBottomOf="@+id/calendarRecordToolbar"
+            app:layout_constraintEnd_toEndOf="@+id/calendarRecordToolbar"
+            app:layout_constraintTop_toTopOf="@+id/calendarRecordToolbar"
+            app:srcCompat="@drawable/ic_setting" />
+
+        <com.example.catch_mentor.customView.CatchMentoBottomNavBar
+            android:id="@+id/calendarRecordBottomNavBar"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--    <com.prolificinteractive.materialcalendarview.MaterialCalendarView-->
+        <!--        android:id="@+id/calendarRecordCalendarView"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent"-->
+        <!--        app:mcv_selectionColor="#8d8d8d"-->
+
+        <!--        />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
