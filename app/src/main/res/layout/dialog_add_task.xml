@@ -88,7 +88,7 @@
                     android:paddingEnd="10dp"
                     android:text="00.00"
                     app:layout_constraintStart_toEndOf="@+id/textView18"
-                    app:layout_constraintTop_toTopOf="@+id/textView18" />
+                    app:layout_constraintTop_toTopOf="@+id/addTaskSetStartDateBtn" />
 
                 <Button
                     android:id="@+id/addTaskSetStartDateBtn"
